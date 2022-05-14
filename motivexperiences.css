@@ -1,0 +1,17 @@
+body{
+    background-color: rgb(73, 30, 30);
+}
+h3,h1{
+    text-align: center;
+    font-size: 30px;
+    color: rgb(225, 229, 232);
+}
+
+.container{
+width: 50%;
+height: 50%;
+border: 5px solid black;
+display: block;
+margin-left: 25%;
+background-image: url(https://img.freepik.com/free-vector/dark-paper-layers-wallpaper-with-golden-details_23-2148403401.jpg?t=st=1652198198~exp=1652198798~hmac=265495b8cc116d250c323b145fd1cb120f47f61893703f1e54b4b1ae63f4837c&w=1380);
+}
