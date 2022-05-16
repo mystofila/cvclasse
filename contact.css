@@ -1,3 +1,14 @@
-html{
-    background-image: url("https://fuchs.azureedge.net/fileadmin/be/Company/contact_us_1920_740.jpg");
+header{
+    background-image: url("contact-us-6933645_1920.jpg");
+
+}
+h1,h2{
+
+   text-align: center ;
+}
+p{
+    opacity: 0;
+}
+body{
+    background-color: rgb(6, 6, 61);
 }
