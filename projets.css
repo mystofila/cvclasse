@@ -1,36 +1,12 @@
 
   body{
-    background-color: #111111;
-  }
+    background: url(mandala-4282571.jpg)  ;
+    }
   .haut{
-    background-color: rgb(45, 135, 135);
+    background-color: rgb(88, 29, 147);
     width: 100%;
     height: 100px;
     margin-bottom: 0%;
-}
-.mail{
-position: absolute;
-top: 3%;
-right: 5%;}
-
-.avatar{
-    position:absolute;
-    left:1%;
-    top:2.5%;
-    width: 85px;
-}
-.bas{
-    top:5%;
-    right:5%;
-    font-size: 20px;
-}
-.barre {
-    list-style-type: none;
-    margin-top:0%;
-    padding: 0;
-    overflow: hidden;
-    background-color: rgb(34, 34, 34);
-    font-size: 150%;
 }
 
 #conteneur{
@@ -50,34 +26,11 @@ justify-content: space-around;}
     border-radius: 10%;
   }
  
-  .box-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    
-    transform-style: preserve-3d;
-  }
+h1{
+  font-size: 60px;
+}
   
-  .box-front,
-  .box-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    border-radius: 8%;
-    border: 8px solid #000000 ;
-  }
-  .box-front {
-    background-color: #222f7c;
-    color: #111111;
-  }
-  .box-back {
-    background-color: #192059;
-    color: #eeeeee;
-   
-  }
-  h2{
+  p{
     align-items: center;
     text-align: center;
     color:white;
@@ -85,87 +38,6 @@ justify-content: space-around;}
   }
 
 
-
-.lit {
-    float: left;
-}
-
-.lit a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-.active {
-    background-color: #5e0505;
-}
-
-span{
-    font-size: 40px;
-    color: rgb(26, 26, 86);
-    position: absolute;
-    left: 43%;
-    top: 1%;
-}
-.point{
-    opacity: 0;
-}
-
-.hobbie{
-height: 300px;
-width: 49%;
-
-border-radius: 8%;
-position: relative;
-left: 25%;
-}
-
-.hobbie-inner {
-    position:relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
-    
-  }
-  .hobbie:hover .hobbie-inner {
-    transform: rotateY(180deg);
-  }
-  .hobbie-front,
-  .hobbie-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    border-radius: 8%;
-    border: 8px solid #000000 ;
-    
-  }
-  .hobbie-front {
-    background-color: #200633;
-    color: #111111;
-    width: 100%;
-    height: 100%;
-  }
-  .hobbie-back {
-    background-color: #4f0b0b;
-    position: absolute;
-    color: #eeeeee;
-    width: 100%;
-    height: 100%;
-    transform: rotateY(180deg);
-   }
-
-  .comp{
-    position: absolute;
-    top: 0%;
-    right: 0%;
-    width: 100%;
-    height: 100%;
-    border-radius:8%;
-  }
 img{
   width: 100%;
   height: 400px;
@@ -187,50 +59,5 @@ img{
         display: flex;
         border-radius: 10%;
       }
-      .box-back {
-        background-color: #256920;
-        color: #eeeeee;
-        transform: rotateY(180deg);
-
-    }
-    .box-front {
-      background-color: #560c52;
-      color: #111111;
-    }
-    .comp{
-        position: absolute;
-        top: 0%;
-        right: 0%;
-        width: 150px;
-        height: 300px;
-        border-radius: 10%;
-      }
-      .hobbie-front,
-  .hobbie-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    border-radius: 8%;
-    
-  }
-  .hobbie{
-    height: 300px;
-    width: 20%;
-    border: 8px solid #000000 ;
-    border-radius: 8%;
-    position: relative;
-    left: 25%;
-    }
-    .hobbie-back {
-      background-color: #1e6922;
-      position: absolute;
-      right: 0%;
-      color: #eeeeee;
-      width: 120%;
-      height: 100%;
-      transform: rotateY(180deg);
-     }
 }
-
 
