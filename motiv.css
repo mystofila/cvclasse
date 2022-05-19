@@ -139,9 +139,10 @@
       }
       fieldset{
         background-color: rgba(60, 60, 74, 0.781);
-        margin-right: 250px;
-        margin-left: 250px;
-        margin-top: 150px;
+        margin-right: 15%;
+        margin-left: 15%;
+        margin-top: 15%;
+        
         
       }
       cite{
