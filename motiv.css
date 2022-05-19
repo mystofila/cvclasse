@@ -13,7 +13,7 @@
       
       .container {
         width: 90%;
-        max-width: 1400px;
+        max-width: 1300px;
         margin: auto;
       }
       h1,h2 {
@@ -25,7 +25,7 @@
       }
       h1 span {
         display: block;
-        color: rgb(38, 67, 231);
+        color: rgb(54, 82, 240);
         font-size: 70px;
       }
       h1 span:nth-child(1) {
@@ -169,16 +169,16 @@
 
       .tel{
         position: absolute;
-        bottom: -62%;
+        bottom: -66%;
         right: 25%;
-        color: rgba(9, 8, 8, 0.744);
+        color: rgba(0, 0, 0, 0.744);
       }
       
 
       .adress{
         position: absolute;
-        bottom: -78%;
-        right: 23%;
+        bottom: -76%;
+        right: 26%;
         color: rgba(9, 8, 8, 0.744);
       }
 
@@ -198,9 +198,8 @@
       }
       ul {
         list-style-type: none;
-        margin-right: -18%;
-        margin-left: -18%;
-        padding: 0px;
+        
+        padding: auto;
         overflow: hidden;
         background-color: #333;
         
@@ -217,15 +216,12 @@
         padding: 14px 16px;
         text-decoration: none;
     }
-    .active {
-        background-color: #5e0505;
-    }
-    span{
+    
+    .span{
         font-size: 45px;
         color: rgb(27, 110, 255);
-        position: absolute;
-        left: 43%;
-        top: 0.1%;
+        float: right;
+        margin-right: 40%;
     }
     .comp{
       position: absolute;
@@ -246,8 +242,9 @@
       color:white
     }
 
+    
 
-    @media screen and (max-width: 1024px)
+    @media screen and (max-width: 704px)
 {
   fieldset{
     background-color: rgba(60, 60, 74, 0.781);
@@ -265,29 +262,18 @@
       .active{
         display: none;
       }
-     span {
+     .span {
         display: block;
         color: rgb(255, 255, 255);
         font-size: 30px;
-        position: absolute;
-        right: 20%;
-        top: 5.2%;
+       
 
       }
       .tel{
-        position: absolute;
-        top: 427%;
-        right: 7%;
-        color: rgba(9, 8, 8, 0.744);
+        opacity: 0;
       }
-      .phone{
-        font-size: 20px;
-        color: #333;
-      }
-
       .adress{
-        visibility: hidden;
-        
+        opacity: 0;
       }
       #menu {
         position: fixed;
@@ -302,8 +288,3 @@
       }
 
 }
- 
-      
-
-
-     
