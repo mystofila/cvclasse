@@ -137,20 +137,24 @@
 
    
       }
-      fieldset{
-        background-color: rgba(60, 60, 74, 0.781);
-        margin-right: 15%;
-        margin-left: 15%;
-        margin-top: 5%;
-        
-        
-      }
-.banni{
-      width: 100%;
-    }
-      cite{
-        background-color: rgb(79, 67, 140);
-      }
+    .fieldset {
+  position: relative;
+  text-align: center;
+  margin-right: 15%;
+  margin-left: 15%;
+  margin-top: 5%;
+  width: 70%; 
+  font-size: 25px;
+  color: rgb(38, 38, 38);
+}
+
+.texte_centrer {
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  margin-left: 15%;
+}
    
       .mail{
         margin-left: 30%;
@@ -250,13 +254,19 @@
 
     @media screen and (max-width: 704px)
 {
-  fieldset{
-    background-color: rgba(60, 60, 74, 0.781);
-   
-      margin-right: 25px;
-      margin-left: 25px;
-      
-    }
+  .fieldset {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    font-size: 80%;
+    color: rgb(38, 38, 38);
+    margin-left: 0%;
+  }
+  .banni{
+  
+        margin-top: 5%;
+        width: 80%;
+  }
     
       .container {
         width: 70%;
