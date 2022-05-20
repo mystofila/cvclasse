@@ -250,7 +250,12 @@
       color:white
     }
 
-    
+    button{
+      color: red;
+      position: absolute;
+      right: 5%;
+      top: 1%;
+    }
 
     @media screen and (max-width: 1224px)
 {
