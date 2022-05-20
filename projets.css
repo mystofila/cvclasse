@@ -1,6 +1,6 @@
 
   body{
-    background: url(mandala-4282571.jpg)  ;
+    background: url(mur.jpg)  ;
     }
   .haut{
     background-color: rgb(88, 29, 147);
@@ -33,7 +33,7 @@ h1{
   p{
     align-items: center;
     text-align: center;
-    color:white;
+    color:black;
     font-size: 40px;
   }
 
@@ -54,7 +54,7 @@ img{
 
     .box {
         background-color: transparent;
-        width: 150px;
+        width: 30%;
         height: 300px;
        
         perspective: 1000px;
