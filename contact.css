@@ -1,6 +1,11 @@
-header{
-    background-image: url("contact-us-6933645_1920.jpg");
 
+header{
+        margin:0;
+    padding:0;
+    background: url("contact-us-6933645_1920.jpg") no-repeat center fixed; 
+    -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+    background-size: cover;
+}
 }
 h1,h2{
 
