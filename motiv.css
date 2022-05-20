@@ -68,7 +68,7 @@
         height: 100%;
         width: 100%;
         padding: 20px;
-        border-radius: 8px;
+        border-radius: 25%;
         backface-visibility: hidden;
         -webkit-backface-visibility: hidden;
         text-align: center;
@@ -237,7 +237,7 @@
       right: 0%;
       width: 100%;
       height: 100%;
-      border-radius:2%;
+      border-radius:25%;
     }
     .citation{
       font-family:"mv boli","ink free", sans-serif;
