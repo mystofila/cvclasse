@@ -305,5 +305,7 @@
         width: 60%;
         height: 60%;
       }
-
+.final{
+        font-size: 15px;
+      }
 }
