@@ -156,24 +156,25 @@
   margin-left: 15%;
 }
    
-      .mail {
+      #menu {
+  position: fixed;
+  right: 0;
+  top: 70%;
+  width: auto;
+}
+
+.mail {
   position: fixed;
   right: 80px;
   bottom: 20px;
   margin: 0;
-}   
-      .icone {
-  width: 80px;
-  height: 80px;
 }
 
-      #menu {
-        position: fixed;
-        right: 0;
-        top: 70%;
-        width: 10em;
-        margin-top: 11em;
-      }
+.icone {
+  width: 80px;
+  height: 80px;
+  display: block;
+}
 
       .tel{
         position: absolute;
