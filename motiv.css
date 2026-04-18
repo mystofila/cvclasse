@@ -172,8 +172,8 @@ h3 {
 }
 
 .card-front p {
-  font-size: 15px;
-  line-height: 1.5;
+  font-size: 13px;
+  line-height: 1.3;
 }
 
 .card-back {
@@ -183,12 +183,20 @@ h3 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 14px;
-  line-height: 1.8;
+  font-size: 12px;
+  line-height: 1.4;
 }
 
 .card-wrapper:nth-child(even) .card-back {
   background-color: #eb6c05;
+}
+
+.card-back br {
+  display: none;
+}
+
+.card-back p {
+  margin: 2px 0;
 }
 
 .card-back a {
