@@ -172,9 +172,8 @@ h3 {
 }
 
 .card-front p {
-  font-size: clamp(16px, 2.5vw, 25px);
+  font-size: 15px;
   line-height: 1.5;
-  align-items: center;
 }
 
 .card-back {
@@ -184,8 +183,8 @@ h3 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: clamp(14px, 2vw, 16px);
-  line-height: 1.6;
+  font-size: 14px;
+  line-height: 1.8;
 }
 
 .card-wrapper:nth-child(even) .card-back {
@@ -384,10 +383,8 @@ audio {
     min-height: 260px;
   }
 
-  /* Sur mobile : tap pour retourner */
-  .card-wrapper:hover .card {
-    transform: none; /* désactive le hover souris */
-  }
+  /* Sur mobile : le hover souris ne fonctionne pas, on utilise .flipped au clic */
+  /* Le :hover est conservé pour desktop, .flipped gère le tactile */
 
   /* --- Fieldset --- */
   .fieldset {
