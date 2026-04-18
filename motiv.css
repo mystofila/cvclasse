@@ -1,312 +1,444 @@
-* 
-      {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      html {
-        background-image: url(mandala.jpg);
-      }
-      body {
-        font-family: "Lato", sans-serif;
-      }
-      
-      .container {
-        width: 90%;
-        max-width: 1300px;
-        margin: auto;
-      }
-      h1,h2 {
-        color: #0c51e6;
-        margin: 20px 0;
-        padding-bottom: 20px;
-        border-bottom: none solid rgb(252, 248, 248);
-        text-align: center;
-      }
-      h1 span {
-        display: block;
-        color: rgb(54, 82, 240);
-        font-size: 70px;
-      }
-      h1 span:nth-child(1) {
-        font-weight: normal;
-        color: #4cc406;
-      }
-      
-      .card-container {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-        grid-gap: 120px;
-        margin: 80px 0;
-        
-      }
-      .card-wrapper {
-        position: relative;
-        min-height: 350px;
-        perspective: 2000px;
-        perspective-origin: top;
-      }
-      
-      .card-wrapper:hover .card {
-        transform: rotateY(180deg);
-        
-      }
-      
-      .card {
-        width: 100%;
-    position: relative;
-    height: 100%;
-    transform-style: preserve-3d;
-    transition: transform 0.8s cubic-bezier(0.86,0,0.07,1);
-    color: white;
-    font-weight: bold;
-  }
-      
-      .card-front, 
-      .card-back {
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        padding: 20px;
-        border-radius: 25%;
-        backface-visibility: hidden;
-        -webkit-backface-visibility: hidden;
-        text-align: center;
-        
-      }
-      
-      .card-front {
-        background: #eb6c05;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
-      
-      .card-wrapper:nth-child(even) .card-front {
-        background-color: #1a2f42;
-      }
-      
-      .card-front p {
-        font-size: 25px;
-        line-height: 35px;
-        align-items: center;
-      }
-      
-      
-      .card-back {
-        background:#1a2f42;
-        transform: rotateY(180deg);
-       
-        align-items: center;
-        text-align: center;
-      }
-        
-      .card-wrapper:nth-child(even) .card-back {
-        background-color: #eb6c05;
-      }
-      
-      .card-back a {
-        display: inline-block;
-        border-radius: 10px;
-        padding: 15px;
-        text-decoration: none;
-        text-transform: uppercase;
-        text-align: center;
-        letter-spacing: 1.5px;
-        font-weight: normal;
-        background-color: rgb(171, 35, 35);
-        font-size: 14px;
-        color: rgb(219, 217, 217);
-        transition: 
-        background-color 0.3s ease-out,
-        color 0.3s ease-out;
-      }
-      
-      .card-wrapper:nth-child(odd) .card-back a:hover {
-        background-color: #0c46e7;
-        color: #fff;
-      }
-      .card-wrapper:nth-child(even) .card-back a:hover {
-        background-color: #ed5d34;
-        color: #fff;
-      }
-      h2 {
-        text-align: center;
-        color: rgb(217, 217, 217);
-        font-size: 30px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-   
-      }
-    .fieldset {
+html {
+  background-image: url(mandala.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+/* ===================== NAVIGATION ===================== */
+
+ul {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: #333;
+  position: relative;
+}
+
+li {
+  /* plus de float, géré par flexbox */
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+li a:hover {
+  background-color: #555;
+}
+
+.span {
+  font-size: 28px;
+  color: rgb(27, 110, 255);
+  margin-left: auto; /* pousse le nom à droite */
+  padding: 10px 16px;
+}
+
+/* Bouton hamburger (caché par défaut sur desktop) */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
+  padding: 10px 16px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/* ===================== CONTAINER ===================== */
+
+.container {
+  width: 90%;
+  max-width: 1300px;
+  margin: auto;
+  padding: 0 10px;
+}
+
+/* ===================== TITRES ===================== */
+
+h1, h2 {
+  color: #0c51e6;
+  margin: 20px 0;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+h2 {
+  color: rgb(217, 217, 217);
+  font-size: clamp(18px, 4vw, 30px);
+}
+
+h1 span {
+  display: block;
+  color: rgb(54, 82, 240);
+  font-size: clamp(40px, 8vw, 70px);
+}
+
+h1 span:nth-child(1) {
+  font-weight: normal;
+  color: #4cc406;
+}
+
+h3 {
+  color: rgb(222, 223, 212);
+  border: black solid 5px;
+  font-size: clamp(16px, 3vw, 23px);
+  font-family: "Apple Chancery", cursive;
+  padding: 10px;
+}
+
+/* ===================== CITATION ===================== */
+
+.citation {
+  font-family: "mv boli", "ink free", sans-serif;
+  color: #f79009;
+}
+
+/* ===================== CARDS ===================== */
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 40px;
+  margin: 40px 0;
+}
+
+.card-wrapper {
+  position: relative;
+  min-height: 300px;
+  perspective: 2000px;
+  perspective-origin: top;
+}
+
+.card-wrapper:hover .card {
+  transform: rotateY(180deg);
+}
+
+/* Support tactile : clic pour retourner la carte */
+.card-wrapper.flipped .card {
+  transform: rotateY(180deg);
+}
+
+.card {
+  width: 100%;
+  position: relative;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+  color: white;
+  font-weight: bold;
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+  border-radius: 20px; /* réduit pour éviter le débordement sur mobile */
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  text-align: center;
+}
+
+.card-front {
+  background: #eb6c05;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-wrapper:nth-child(even) .card-front {
+  background-color: #1a2f42;
+}
+
+.card-front p {
+  font-size: clamp(16px, 2.5vw, 25px);
+  line-height: 1.5;
+  align-items: center;
+}
+
+.card-back {
+  background: #1a2f42;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: clamp(14px, 2vw, 16px);
+  line-height: 1.6;
+}
+
+.card-wrapper:nth-child(even) .card-back {
+  background-color: #eb6c05;
+}
+
+.card-back a {
+  display: inline-block;
+  border-radius: 10px;
+  padding: 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: normal;
+  background-color: rgb(171, 35, 35);
+  font-size: 14px;
+  color: rgb(219, 217, 217);
+  transition: background-color 0.3s ease-out, color 0.3s ease-out;
+}
+
+.card-wrapper:nth-child(odd) .card-back a:hover {
+  background-color: #0c46e7;
+  color: #fff;
+}
+
+.card-wrapper:nth-child(even) .card-back a:hover {
+  background-color: #ed5d34;
+  color: #fff;
+}
+
+.comp {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+/* ===================== SOFT / BOUTONS ===================== */
+
+.soft {
+  font-size: clamp(18px, 3vw, 30px);
+}
+
+.btn {
+  display: inline-block;
+  background: rgba(255,255,255,0.15);
+  border-radius: 8px;
+  padding: 4px 10px;
+  margin: 4px;
+}
+
+.point {
+  opacity: 0;
+  line-height: 0;
+  font-size: 0;
+}
+
+/* ===================== FIELDSET / BANNIÈRE ===================== */
+
+.fieldset {
   position: relative;
   text-align: center;
-  margin-right: 15%;
-  margin-left: 15%;
-  margin-top: 5%;
-  width: 70%; 
-  font-size: 25px;
+  width: 70%;
+  max-width: 900px;
+  margin: 5% auto;
+  font-size: 20px;
   color: rgb(38, 38, 38);
 }
 
-.texte_centrer {
-  position: absolute;
-  top: 50%;
-  left: 60%;
-  transform: translate(-50%, -50%);
-  margin-left: 15%;
+.banni {
+  width: 100%;
+  height: auto;
+  display: block;
 }
-   
-      #menu {
+
+.texte_centrer {
+  background: rgba(0, 0, 0, 0.55);
+  color: white;
+  border-radius: 10px;
+  padding: 16px 24px;
+  margin-top: 12px;
+  font-size: clamp(14px, 2.5vw, 20px);
+  /* On sort du positionnement absolu pour mobile */
+  position: static;
+  transform: none;
+}
+
+/* ===================== MAIL / ICONE FIXE ===================== */
+
+#menu {
   position: fixed;
   right: 0;
   top: 70%;
   width: auto;
+  z-index: 100;
 }
 
 .mail {
   position: fixed;
-  left: 80px;
+  left: 20px;
   bottom: 20px;
   margin: 0;
+  z-index: 100;
 }
 
 .icone {
-  width: 100px;
-  height: 100px;
+  width: 70px;
+  height: 70px;
   display: block;
+  border-radius: 50%;
 }
 
-      .tel{
-        position: absolute;
-        bottom: -66%;
-        right: 25%;
-        color: rgba(0, 0, 0, 0.744);
-      }
-      
+/* ===================== DIVERS ===================== */
 
-      .adress{
-        position: absolute;
-        bottom: -76%;
-        right: 26%;
-        color: rgba(9, 8, 8, 0.744);
-      }
+.final {
+  color: white;
+  text-align: center;
+  font-size: clamp(10px, 2vw, 14px);
+  padding: 10px 0 20px;
+}
 
-      .soft{
-        font-size: 30px;
-      }
-      .point{
-        opacity: 0;
-      }
+button {
+  color: red;
+  position: absolute;
+  right: 5%;
+  top: 1%;
+}
 
-      h3{
-        color: rgb(222, 223, 212);
-        border: black solid 5px;
-      
-        font-size: 23px;
-        font-family: "Apple Chancery", cursive;
-      }
-      ul {
-        list-style-type: none;
-        
-        padding: auto;
-        overflow: hidden;
-        background-color: #333;
-        
-    }
-    
-    li {
-        float: left;
-    }
-    
-    li a {
-        display: block;
-        color: white;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-    }
-    
-    .span{
-        font-size: 45px;
-        color: rgb(27, 110, 255);
-        float: right;
-        margin-right: 40%;
-    }
-    .comp{
-      position: absolute;
-      top: 0%;
-      right: 0%;
-      width: 100%;
-      height: 100%;
-      border-radius:25%;
-    }
-    .citation{
-      font-family:"mv boli","ink free", sans-serif;
-      color: #f79009;
-    }
-    .point{
-      opacity: 0;
-    }
-    .final{
-      color:white
-    }
+audio {
+  display: block;
+  width: 90%;
+  max-width: 400px;
+  margin: 10px auto;
+}
 
-    button{
-      color: red;
-      position: absolute;
-      right: 5%;
-      top: 1%;
-    }
+/* ===================== TABLETTE (max 1024px) ===================== */
 
-    @media screen and (max-width: 1224px)
-{
+@media screen and (max-width: 1024px) {
   .fieldset {
-    position: relative;
-    text-align: center;
-    width: 100%;
-    font-size: 80%;
-    color: rgb(38, 38, 38);
-    margin-left: 0%;
+    width: 90%;
   }
-  .banni{
-  
-        margin-top: 5%;
-        width: 80%;
-  }
-    
-      .container {
-        width: 70%;
-        max-width: 1400px;
-        
-      }
-      .active{
-        display: none;
-      }
-     .span {
-        display: block;
-        color: rgb(255, 255, 255);
-        font-size: 30px;
-       
 
-      }
-      .tel{
-        opacity: 0;
-      }
-      .adress{
-        opacity: 0;
-      }
-      #menu {
-        position: fixed;
-        right: -8%;
-        top: 70%;
-        width: 9.5em;
-        margin-top: 12em;
-      }
-      .icone{
-        width: 60%;
-        height: 60%;
-      }
-.final{
-        font-size: 10px;
-      }
+  .card-container {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 30px;
+  }
+}
+
+/* ===================== MOBILE (max 768px) ===================== */
+
+@media screen and (max-width: 768px) {
+
+  /* --- Menu hamburger --- */
+  .menu-toggle {
+    display: block;
+  }
+
+  ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  ul li {
+    width: 100%;
+  }
+
+  /* Les liens sont cachés par défaut sur mobile */
+  ul li:not(:first-child):not(.menu-toggle-li) {
+    display: none;
+  }
+
+  /* Quand le menu est ouvert */
+  ul.open li {
+    display: block;
+  }
+
+  .span {
+    font-size: 18px;
+    margin-left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 8px;
+  }
+
+  /* --- Cards --- */
+  .card-container {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin: 20px 0;
+  }
+
+  .card-wrapper {
+    min-height: 260px;
+  }
+
+  /* Sur mobile : tap pour retourner */
+  .card-wrapper:hover .card {
+    transform: none; /* désactive le hover souris */
+  }
+
+  /* --- Fieldset --- */
+  .fieldset {
+    width: 95%;
+    font-size: 16px;
+    margin: 20px auto;
+  }
+
+  /* --- Mail icone --- */
+  .mail {
+    left: 10px;
+    bottom: 10px;
+  }
+
+  .icone {
+    width: 50px;
+    height: 50px;
+  }
+
+  #menu {
+    display: none; /* masque si vide ou inutile sur mobile */
+  }
+
+  /* --- Container --- */
+  .container {
+    width: 95%;
+  }
+
+  h3 {
+    font-size: 15px;
+  }
+}
+
+/* ===================== TRÈS PETIT MOBILE (max 480px) ===================== */
+
+@media screen and (max-width: 480px) {
+  .card-wrapper {
+    min-height: 220px;
+  }
+
+  .card-front p {
+    font-size: 14px;
+  }
+
+  .fieldset {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .texte_centrer {
+    font-size: 14px;
+    padding: 10px;
+  }
 }
